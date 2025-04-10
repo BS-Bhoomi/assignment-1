@@ -1,0 +1,34 @@
+name: Welcome New Contributor
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome Message
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            🌟 **Welcome to the SCM Practical Repository!**
+
+            Hey there, and welcome aboard! This repository is part of our **Source Code Management (SCM)** practical tasks, where we explore Git, GitHub, and automation with GitHub Actions.
+
+            Here’s a quick intro:
+            - 📚 **Purpose**: Learn and demonstrate SCM concepts through hands-on activities like branching, merging, and automation.
+            - 🛠️ **Folder Structure**: You'll find experiment-specific files organized by tasks (e.g., `experiment-1`, `experiment-8`, etc.).
+            - 🤝 **Collaborate**: Got questions or suggestions? Feel free to open issues or discussions!
+
+            We’re super excited to have you contributing—let’s make learning Git & GitHub fun together! 💻✨
+
+          pr-message: |
+            🚀 **Thanks for your first pull request to the SCM Practical Repository!**
+
+            We appreciate your contribution to this educational repo focused on Git and GitHub workflows. 
+            - 🧪 We’ll review your changes shortly.
+            - 📘 Be sure to follow any experiment-specific formats or file naming conventions.
+
+            Welcome to the team of contributors! 🎉 Keep learning, keep coding!
